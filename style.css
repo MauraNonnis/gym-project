@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Sen", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 1em;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .mainMenu {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+  display: none;
+}
+nav .mainMenu li {
+  list-style-type: none;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+nav .mainMenu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.openMenu:hover {
+  cursor: pointer;
+}
+
+nav .mainMenu .closeMenu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #2BD900;
+}
+
+nav .openMenu {
+  display: block;
+  color: #2BD900;
+}
+
+nav .mainMenu li a:hover {
+  background: none;
+  color: #000;
+  background-color: #2BD900;
+  padding: 0.5em 7em;
+}
+
+.icons i {
+  display: inline-block;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.fa-instagram:hover {
+  color: fuchsia;
+}
+
+.fa-facebook:hover {
+  color: #4267B2;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-image: url(img/gym.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 650px;
+  margin-top: -4em;
+}
+
+.hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: #2BD900;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.discover-more-btn {
+  margin-top: 4em;
+  padding: 0.8em 0.9em;
+  background-color: #2BD900;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.discover-more-btn:hover {
+  background-color: yellow;
+}
+.discover-more-btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-content {
+  padding: 1em 1em;
+  padding-bottom: 3em;
+  text-align: center;
+  margin-top: 1em;
+}
+.main-content h3 {
+  margin-top: 2em;
+  text-align: center;
+  border-bottom: 1px solid #2BD900;
+  display: block;
+  width: 40%;
+  margin: 2.3em auto 1em auto;
+}
+.main-content p {
+  line-height: 1.6;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .icons {
+  padding-bottom: 0.5em;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    width: 90%;
+  }
+
+  .main-content, .footer {
+    display: none;
+  }
+}
+@media (min-width: 840px) {
+  .home {
+    margin-top: -6em;
+    overflow: hidden;
+  }
+  .home .hero {
+    overflow: hidden;
+  }
+
+  .openMenu,
+.fa,
+.closeMenu {
+    display: none;
+  }
+
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 1em;
+  }
+  .nav .mainMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: unset;
+    padding: 0;
+    font-size: 0.7em;
+    position: unset;
+    z-index: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+    max-width: 70%;
+  }
+  .nav .mainMenu a {
+    color: #fff;
+  }
+  .nav .mainMenu a:hover {
+    padding: 0;
+    background-color: unset;
+    color: #2BD900;
+    font-size: unset;
+  }
+}
+@media (min-width: 860px) {
+  .hero {
+    max-width: 60%;
+  }
+
+  .home {
+    background-size: 800px;
+  }
+
+  .fa {
+    display: none;
+  }
+}
+@media (min-width: 1300px) {
+  .hero {
+    max-width: 50%;
+  }
+
+  .home {
+    background-size: 1000px;
+    background-position: center;
+    margin-top: -6.5em;
+  }
+}/*# sourceMappingURL=style.css.map */
